@@ -267,6 +267,5 @@ p { margin: 0 0 0.9em; }
 }
 .partner-mark { display: inline-flex; align-items: center; color: var(--gunmetal); }
 .partner-mark svg { height: 19px; width: auto; display: block; }
-.partner-word {
-  font-size: 0.98rem; font-weight: 600; letter-spacing: -0.015em; color: var(--gunmetal);
-}
+/* the Prior mark carries fine linework in its glyph, so it needs a little more height */
+.partner-prior svg { height: 23px; }
