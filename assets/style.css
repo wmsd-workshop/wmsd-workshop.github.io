@@ -226,8 +226,6 @@ p { margin: 0 0 0.9em; }
 }
 .tl-title { font-size: 0.94rem; font-weight: 500; }
 .tl-note { font-size: 0.82rem; color: var(--text-mute); }
-.tl.now .tl-date { color: var(--tiger); }
-.tl.now .tl-title { font-weight: 600; }
 
 /* ---------- footer ---------- */
 
