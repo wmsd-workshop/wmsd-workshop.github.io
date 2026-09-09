@@ -193,11 +193,6 @@ p { margin: 0 0 0.9em; }
   object-fit: cover; flex: none;
   filter: saturate(0.92);
 }
-.avatar-mono {
-  display: flex; align-items: center; justify-content: center;
-  background: var(--panel); color: var(--text-mute);
-  font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.02em;
-}
 .person-id h3 { font-size: 1rem; font-weight: 600; }
 .aff { margin: 2px 0 0; font-size: 0.82rem; color: var(--text-mute); }
 .bio { margin: 0; font-size: 0.87rem; line-height: 1.6; color: var(--text-dim); }
@@ -226,16 +221,21 @@ p { margin: 0 0 0.9em; }
 
 /* ---------- footer ---------- */
 
-.footer { border-top: 1px solid var(--rule); padding: 34px 0 44px; }
+.footer { border-top: 1px solid var(--rule); padding: 32px 0 40px; }
 .footer-inner {
-  display: flex; flex-wrap: wrap; gap: 22px;
+  display: flex; flex-wrap: wrap; gap: 28px 48px;
   align-items: flex-start; justify-content: space-between;
 }
-.foot-brand { font-family: var(--mono); font-size: 0.85rem; margin: 0 0 7px; }
-.foot-note { margin: 0; font-size: 0.82rem; color: var(--text-mute); max-width: 62ch; line-height: 1.6; }
-.foot-links { display: flex; gap: 22px; }
-.foot-links a { font-size: 0.85rem; color: var(--text-mute); }
+.foot-main { max-width: 54ch; }
+.foot-brand {
+  font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.02em;
+  color: var(--text); margin: 0 0 6px;
+}
+.foot-note { margin: 0; font-size: 0.8rem; color: var(--text-mute); line-height: 1.55; }
+.foot-links { display: flex; flex-direction: column; gap: 7px; }
+.foot-links a { font-size: 0.8rem; color: var(--text-mute); }
 .foot-links a:hover { color: var(--tiger); }
+@media (min-width: 720px) { .foot-links { text-align: right; } }
 
 /* ---------- motion ---------- */
 
