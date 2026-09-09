@@ -117,6 +117,23 @@ p { margin: 0 0 0.9em; }
 .brand-sub { font-size: 0.74rem; color: var(--on-dark-mute); white-space: nowrap; }
 
 .nav { display: flex; gap: 22px; flex-wrap: wrap; min-width: 0; }
+
+.nav-toggle {
+  display: none;
+  background: none; border: 0; padding: 10px; margin-right: -10px;
+  color: var(--on-dark); cursor: pointer; line-height: 0;
+}
+.nav-toggle:focus-visible { outline: 2px solid var(--tiger); outline-offset: 2px; }
+.nav-bars { position: relative; display: block; width: 22px; height: 2px; background: currentColor; }
+.nav-bars::before, .nav-bars::after {
+  content: ""; position: absolute; left: 0; width: 22px; height: 2px; background: currentColor;
+  transition: transform 0.18s ease;
+}
+.nav-bars::before { top: -7px; }
+.nav-bars::after  { top: 7px; }
+.topbar.open .nav-bars { background: transparent; }
+.topbar.open .nav-bars::before { transform: translateY(7px) rotate(45deg); }
+.topbar.open .nav-bars::after  { transform: translateY(-7px) rotate(-45deg); }
 .nav a { color: var(--on-dark-mute); font-size: 0.85rem; text-decoration: none; white-space: nowrap; }
 .nav a:hover { color: var(--on-dark); }
 
@@ -289,18 +306,24 @@ p { margin: 0 0 0.9em; }
 /* ---------- small screens ---------- */
 
 @media (max-width: 760px) {
-  /* a tall sticky bar eats a phone screen, and the page is short enough to scroll */
-  .topbar { position: static; }
-  .topbar-inner {
-    flex-direction: column; align-items: flex-start;
-    gap: 10px; padding: 12px 0;
-  }
-  /* one line that scrolls sideways, rather than a block that wraps into a wall */
+  .topbar { position: relative; }
+  .topbar-inner { min-height: 54px; }
+  .nav-toggle { display: block; }
+
   .nav {
-    width: 100%; flex-wrap: nowrap; gap: 20px;
-    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 50;
+    flex-direction: column; flex-wrap: nowrap; gap: 0;
+    background: var(--gunmetal);
+    border-bottom: 1px solid rgba(233, 238, 240, 0.12);
+    padding: 4px 20px 12px;
   }
-  .nav::-webkit-scrollbar { display: none; }
+  .topbar.open .nav { display: flex; }
+  .nav a {
+    padding: 13px 2px; font-size: 0.95rem;
+    border-bottom: 1px solid rgba(233, 238, 240, 0.08);
+  }
+  .nav a:last-child { border-bottom: 0; }
 
   .hero { padding: 52px 0 46px; }
   .hero-meta { gap: 22px 32px; margin-top: 32px; }

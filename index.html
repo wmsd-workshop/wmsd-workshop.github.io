@@ -45,7 +45,10 @@
       <span class="brand-mark">WMSD</span>
       <span class="brand-sub">ICLR 2027</span>
     </a>
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-bars" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="#about">About</a>
       <a href="#scope">Call</a>
       <a href="#speakers">Speakers</a>
@@ -394,5 +397,32 @@
   </div>
 </footer>
 
+
+<script>
+(function () {
+  var bar = document.querySelector('.topbar');
+  var btn = document.querySelector('.nav-toggle');
+  if (!bar || !btn) return;
+
+  function setOpen(open) {
+    bar.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  btn.addEventListener('click', function () {
+    setOpen(!bar.classList.contains('open'));
+  });
+
+  // tapping a destination should close the menu behind you
+  bar.querySelectorAll('.nav a').forEach(function (a) {
+    a.addEventListener('click', function () { setOpen(false); });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && bar.classList.contains('open')) { setOpen(false); btn.focus(); }
+  });
+})();
+</script>
 </body>
 </html>
