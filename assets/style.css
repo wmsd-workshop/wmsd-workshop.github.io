@@ -193,6 +193,16 @@ p { margin: 0 0 0.9em; }
   object-fit: cover; flex: none;
   filter: saturate(0.92);
 }
+.avatar-open {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed var(--rule); background: transparent;
+  color: var(--text-mute); font-family: var(--mono); font-size: 1rem;
+}
+.person-open .person-id h3,
+.person-open .aff,
+.person-open .bio { color: var(--text-mute); }
+.person-open .person-id h3 { font-weight: 500; }
+
 .person-id h3 { font-size: 1rem; font-weight: 600; }
 .aff { margin: 2px 0 0; font-size: 0.82rem; color: var(--text-mute); }
 .bio { margin: 0; font-size: 0.87rem; line-height: 1.6; color: var(--text-dim); }
