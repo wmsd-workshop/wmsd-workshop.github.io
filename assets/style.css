@@ -181,7 +181,7 @@ p { margin: 0 0 0.9em; }
 /* ---------- sections ---------- */
 
 .section { padding: 60px 0; border-bottom: 1px solid var(--rule); }
-.section h2 { color: #fff; }
+.section h2 { color: var(--gunmetal); font-weight: 700; }
 .section:last-of-type { border-bottom: 0; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 26px; }
