@@ -90,7 +90,6 @@ p { margin: 0 0 0.9em; }
 .prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--text); font-weight: 600; }
 .prose em { color: var(--text); font-style: italic; }
-.small { font-size: 0.84rem; color: var(--text-mute); }
 
 .note {
   margin: 26px 0 0;
