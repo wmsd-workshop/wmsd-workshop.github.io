@@ -79,6 +79,8 @@ p { margin: 0 0 0.9em; }
   margin: 0 0 10px;
 }
 
+.kicker.sub { margin-top: 54px; }
+
 .prose { max-width: 62ch; color: var(--text-dim); }
 .prose p:last-child { margin-bottom: 0; }
 .prose strong { color: var(--text); font-weight: 600; }
