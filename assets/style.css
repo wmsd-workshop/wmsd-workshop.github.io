@@ -16,9 +16,11 @@
   --bg:        var(--steel);
   --text:      var(--gunmetal);
   --text-dim:  #1b2a31;
-  --text-mute: #26353c;
-  --rule:      rgba(18, 33, 40, 0.22);
-  --rule-soft: rgba(18, 33, 40, 0.13);
+  --text-mute: #243239;
+  --rule:      rgba(18, 33, 40, 0.20);
+  --rule-soft: rgba(18, 33, 40, 0.12);
+  --on-dark:      #e9eef0;
+  --on-dark-mute: #9aa6ab;
 
   --maxw: 980px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -63,7 +65,7 @@ h1 {
   letter-spacing: -0.03em;
   line-height: 1.08;
 }
-h1 .accent { color: #fff; }
+h1 .accent { color: var(--gunmetal); opacity: 0.62; }
 
 h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 h3 { font-size: 0.97rem; font-weight: 600; letter-spacing: -0.005em; }
@@ -101,22 +103,21 @@ p { margin: 0 0 0.9em; }
 
 .topbar {
   position: sticky; top: 0; z-index: 40;
-  background: rgba(135, 143, 146, 0.92);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-bottom: 1px solid var(--rule-soft);
+  background: var(--gunmetal);
+  border-bottom: 1px solid rgba(233, 238, 240, 0.10);
 }
 .topbar-inner {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; height: 56px;
 }
-.brand { display: flex; align-items: baseline; gap: 9px; color: var(--text); }
+.brand { display: flex; align-items: baseline; gap: 9px; color: var(--on-dark); }
 .brand, .brand:hover { text-decoration: none; }
-.brand-mark { font-family: var(--mono); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; }
-.brand-sub { font-size: 0.74rem; color: var(--text-mute); }
+.brand-mark { font-family: var(--mono); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; color: var(--tiger); }
+.brand-sub { font-size: 0.74rem; color: var(--on-dark-mute); }
 
 .nav { display: flex; gap: 22px; flex-wrap: wrap; }
-.nav a { color: var(--text-mute); font-size: 0.85rem; text-decoration: none; }
-.nav a:hover { color: var(--text); }
+.nav a { color: var(--on-dark-mute); font-size: 0.85rem; text-decoration: none; }
+.nav a:hover { color: var(--on-dark); }
 
 /* ---------- hero ---------- */
 
@@ -129,7 +130,7 @@ p { margin: 0 0 0.9em; }
   color: var(--text-mute);
   margin: 0 0 26px;
 }
-.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--tiger); }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gunmetal); }
 
 .lede {
   margin: 24px 0 0;
@@ -230,7 +231,13 @@ p { margin: 0 0 0.9em; }
 
 /* ---------- footer ---------- */
 
-.footer { border-top: 1px solid var(--rule); padding: 32px 0 40px; }
+.footer {
+  background: var(--gunmetal);
+  border-top: 3px solid var(--tiger);
+  color: var(--on-dark);
+  padding: 34px 0 42px;
+  margin-top: 8px;
+}
 .footer-inner {
   display: flex; flex-wrap: wrap; gap: 28px 48px;
   align-items: flex-start; justify-content: space-between;
@@ -238,12 +245,12 @@ p { margin: 0 0 0.9em; }
 .foot-main { max-width: 54ch; }
 .foot-brand {
   font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.02em;
-  color: var(--text); margin: 0 0 6px;
+  color: var(--tiger); margin: 0 0 6px;
 }
-.foot-note { margin: 0; font-size: 0.8rem; color: var(--text-mute); line-height: 1.55; }
+.foot-note { margin: 0; font-size: 0.8rem; color: var(--on-dark-mute); line-height: 1.55; }
 .foot-links { display: flex; flex-direction: column; gap: 7px; }
-.foot-links a { font-size: 0.8rem; color: var(--text-mute); }
-.foot-links a:hover { color: var(--text); }
+.foot-links a { font-size: 0.8rem; color: var(--on-dark-mute); text-decoration-color: rgba(233,238,240,0.35); }
+.foot-links a:hover { color: var(--on-dark); text-decoration-color: var(--on-dark); }
 @media (min-width: 720px) { .foot-links { text-align: right; } }
 
 /* ---------- motion ---------- */
@@ -258,14 +265,14 @@ p { margin: 0 0 0.9em; }
 .partners {
   display: flex; align-items: center; gap: 26px; flex-wrap: wrap;
   margin-top: 26px; padding-top: 20px;
-  border-top: 1px solid var(--rule-soft);
+  border-top: 1px solid rgba(233, 238, 240, 0.12);
 }
 .partners-label {
   font-family: var(--mono); font-size: 0.64rem;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--text-mute); margin: 0;
+  color: var(--on-dark-mute); margin: 0;
 }
-.partner-mark { display: inline-flex; align-items: center; color: var(--gunmetal); }
+.partner-mark { display: inline-flex; align-items: center; color: var(--on-dark); }
 .partner-mark svg { height: 19px; width: auto; display: block; }
 /* the Prior mark carries fine linework in its glyph, so it needs a little more height */
 .partner-prior svg { height: 23px; }
