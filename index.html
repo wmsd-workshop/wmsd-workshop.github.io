@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WMSD @ ICLR 2027 - World Models for Structured Data</title>
-<meta name="description" content="World Models for Structured Data - proposed workshop at ICLR 2027. Structured-data foundation models predict. They cannot act. World models for systems with no camera and no robot.">
+<meta name="description" content="World Models for Structured Data - proposed workshop at ICLR 2027. The systems we most want to plan in are recorded rather than filmed: action-conditioned dynamics models over relational, tabular and telemetry state.">
 <link rel="canonical" href="https://wmsd-workshop.github.io/">
 
 <meta property="og:site_name" content="WMSD @ ICLR 2027">
 <meta property="og:title" content="WMSD @ ICLR 2027 - World Models for Structured Data">
-<meta property="og:description" content="Structured-data foundation models predict. They cannot act. What would it take to build world models for systems with no camera and no robot? A proposed ICLR 2027 workshop.">
+<meta property="og:description" content="The systems we most want to plan in are recorded rather than filmed. Action-conditioned world models over relational, tabular and telemetry state. A proposed ICLR 2027 workshop.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://wmsd-workshop.github.io/">
@@ -21,7 +21,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WMSD @ ICLR 2027 - World Models for Structured Data">
-<meta name="twitter:description" content="Structured-data foundation models predict. They cannot act. World models for systems with no camera and no robot.">
+<meta name="twitter:description" content="The systems we most want to plan in are recorded rather than filmed. Action-conditioned world models over structured state.">
 <meta name="twitter:image" content="https://wmsd-workshop.github.io/assets/og.png">
 <meta name="twitter:image:alt" content="WMSD at ICLR 2027. World Models for Structured Data.">
 
@@ -47,13 +47,11 @@
     </a>
     <nav class="nav">
       <a href="#about">About</a>
-      <a href="#topics">Topics</a>
-      <a href="#format">Format</a>
+      <a href="#scope">Call</a>
+      <a href="#speakers">Speakers</a>
       <a href="#challenge">Challenge</a>
       <a href="#dates">Dates</a>
-      <a href="#people">Organizers</a>
-      <a href="#sponsors">Sponsors</a>
-      <a class="nav-cta" href="#join">Get involved</a>
+      <a href="#organizers">Organizers</a>
     </nav>
   </div>
 </header>
@@ -64,39 +62,17 @@
 <section class="hero">
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="status"><span class="dot"></span>Proposal in preparation &middot; not yet accepted</p>
+    <p class="status"><span class="dot"></span>Proposal in preparation</p>
     <h1>World&nbsp;Models<br>for <span class="accent">Structured&nbsp;Data</span></h1>
     <p class="lede">
-      Structured-data foundation models predict. They cannot act.
-      What would it take to build world models for systems with
-      <strong>no camera and no robot</strong>?
+      Factories, grids, supply chains, fleets, clinical pathways: the systems we most want to
+      plan in are <strong>recorded rather than filmed</strong>. WMSD is about world models for
+      that kind of state - dynamics you can roll forward under an action you choose.
     </p>
     <div class="hero-meta">
       <div class="meta-item"><span class="meta-k">Venue</span><span class="meta-v">ICLR 2027</span></div>
       <div class="meta-item"><span class="meta-k">Dates</span><span class="meta-v">29-30 April 2027</span></div>
       <div class="meta-item"><span class="meta-k">Format</span><span class="meta-v">Full day &middot; in person</span></div>
-    </div>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#join">Join the committee</a>
-      <a class="btn btn-ghost" href="#sponsors">Sponsor the workshop</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ THE ASYMMETRY ============ -->
-<section class="band">
-  <div class="wrap stats">
-    <div class="stat">
-      <span class="stat-n">3,468</span>
-      <span class="stat-l">arXiv papers on world models</span>
-    </div>
-    <div class="stat stat-hero">
-      <span class="stat-n accent">23</span>
-      <span class="stat-l">of them also mention time series</span>
-    </div>
-    <div class="stat">
-      <span class="stat-n">15</span>
-      <span class="stat-l">also mention tabular data</span>
     </div>
   </div>
 </section>
@@ -106,119 +82,122 @@
   <div class="wrap grid-2">
     <div>
       <p class="kicker">The workshop</p>
-      <h2>Two literatures worth thousands of citations. Almost nothing in between.</h2>
+      <h2>Dynamics you can act on, over state that is recorded rather than filmed.</h2>
     </div>
     <div class="prose">
       <p>
-        Over three years, TabPFN, Chronos, TimesFM, Moirai, KumoRFM and RelBench made a real
-        advance: one model, many schemas, transfer where the field previously trained one model
-        per dataset. But every one of them is trained purely observationally. They estimate what
-        will happen. They cannot answer the question their users actually ask, which is
-        <em>what happens if I intervene</em>.
+        World models are moving quickly: 306 arXiv papers in 2024, 794 in 2025, and 1,530 in the
+        first eight months of 2026. Nearly all of them are about pixels and robots.
       </p>
       <p>
-        Meanwhile the world-model literature - Dreamer, JEPA, learned simulators - has spent the
-        same three years almost entirely on pixels and robots. Every architecture in wide use
-        inherits a spatial inductive bias from images. Remove it and the open question becomes
-        concrete: <strong>what replaces spatial structure when the state is a schema?</strong>
-        A foreign-key graph, a process topology, a causal graph, an event grammar. The field has
-        not decided.
+        The structured-data corner is young, and it is where the growth now is. Of the 23
+        world-model papers that also mention time series, 13 appeared in 2026 alone, and two
+        thirds of the tabular ones are from the last two years. Over the same period TabPFN,
+        Chronos, TimesFM, Moirai, KumoRFM and RelBench established that one model can transfer
+        across schemas - all of them trained observationally, to predict rather than to act.
       </p>
       <p>
-        WMSD is a day organised around one question: what would it take to build an
-        action-conditioned, interventionally valid dynamics model over structured state?
-        Databases you can roll forward under a policy. Factories and grids you can plan in.
-        Fleets and processes whose future depends on what you do next.
+        WMSD is organised around one question: what would it take to build action-conditioned,
+        interventionally valid dynamics models over structured state? Concretely,
+        <strong>what replaces the spatial inductive bias when the state is a schema</strong> -
+        a foreign-key graph, a process topology, a causal graph, an event grammar.
       </p>
-      <p class="small">
-        Counts above are arXiv abstract searches, retrieved September 2026. The bridging papers
-        between the two literatures - PLDM, RelBench, Relational Deep Learning, Richens &amp;
-        Everitt - sit under 100 citations each, against canon papers in the thousands.
-      </p>
+      <p class="small">arXiv abstract search, 9 September 2026.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ TOPICS ============ -->
-<section id="topics" class="section section-alt">
+<!-- ============ SCOPE ============ -->
+<section id="scope" class="section section-alt">
   <div class="wrap">
-    <p class="kicker">Scope</p>
-    <h2>What we want to see</h2>
+    <p class="kicker">Call for papers</p>
+    <h2>Scope</h2>
     <div class="cards">
       <article class="card">
         <span class="card-num">01</span>
         <h3>Action-conditioned dynamics</h3>
-        <p>Models of structured state that take an action and predict a consequence. Relational, tabular, event-stream and telemetry state. What the action space even is when the object is a database.</p>
+        <p>Models of relational, tabular, event-stream and telemetry state that take an action and predict a consequence.</p>
       </article>
       <article class="card">
         <span class="card-num">02</span>
         <h3>Latent state without a spatial prior</h3>
-        <p>What replaces the inductive bias that pixels give you for free. Sufficiency, abstraction, identifiability, and what a schema contributes that a grid does not.</p>
+        <p>Sufficiency, abstraction and identifiability when the state is a schema rather than a grid.</p>
       </article>
       <article class="card">
         <span class="card-num">03</span>
-        <h3>Learned simulators and digital twins</h3>
-        <p>Industrial process, energy systems, supply chains, scientific measurement. Rollout stability, long-horizon error accumulation, and when a learned simulator beats the physics one.</p>
+        <h3>Learned simulators</h3>
+        <p>Industrial process, energy systems, supply chains, scientific measurement. Rollout stability and long-horizon error.</p>
       </article>
       <article class="card">
         <span class="card-num">04</span>
         <h3>Interventional evaluation</h3>
-        <p>Benchmarks that can show a rollout is wrong. Counterfactual protocols for structured data. Contamination, leakage, and the strength of the baseline you were compared against.</p>
+        <p>Benchmarks that can show a rollout is wrong. Counterfactual protocols, contamination and leakage.</p>
       </article>
       <article class="card">
         <span class="card-num">05</span>
         <h3>Negative results</h3>
-        <p>Where a structured-data world model does not beat a tuned baseline or a domain simulator, and why. We mean this: negative results are in scope and will be accepted.</p>
+        <p>Where a structured-data world model does not beat a tuned baseline or a domain simulator, and why.</p>
       </article>
       <article class="card">
         <span class="card-num">06</span>
-        <h3>Deployment in the wild</h3>
-        <p>Domain shift, reliability, privacy, regulation, inference budgets. What breaks between the benchmark and the plant floor.</p>
+        <h3>Deployment</h3>
+        <p>Domain shift, reliability, privacy, regulation and inference budgets between the benchmark and the plant floor.</p>
       </article>
     </div>
     <p class="note">
-      Out of scope, deliberately: <strong>embodied and visual world models</strong>, and
-      <strong>clinical trial simulation</strong>. Both are well served elsewhere.
-      Submissions are 4 pages, non-archival, double-blind on OpenReview, plus a short-paper track
-      for late-breaking work. <strong>Novelty is not a requirement for acceptance.</strong>
-      One author per submission serves on the program committee.
+      Four pages, non-archival, double-blind on OpenReview, with a short-paper track for
+      late-breaking work. Novelty is not a requirement for acceptance, and negative results are
+      in scope. Out of scope: embodied and visual world models, and clinical trial simulation.
     </p>
   </div>
 </section>
 
-<!-- ============ FORMAT ============ -->
-<section id="format" class="section">
-  <div class="wrap grid-2">
-    <div>
-      <p class="kicker">Format</p>
-      <h2>A day built for exchange, not for talks.</h2>
-      <div class="prose">
-        <p>
-          Four invited talks, not twelve. Eight spotlights. Two poster sessions running
-          155 minutes, because posters are where the feedback and the collaborations actually
-          happen. Invited talks take 26% of the clock; contributed work and interactive
-          formats take 54%.
-        </p>
-        <p>
-          <strong>And no panel.</strong> Panels are where five senior people say "exciting times
-          ahead" for 45 minutes.
-        </p>
-      </div>
-    </div>
-    <div class="schedule">
-      <div class="sched-row"><span class="t">09:00</span><span class="e">Opening</span></div>
-      <div class="sched-row"><span class="t">09:10</span><span class="e">Invited talk</span></div>
-      <div class="sched-row hi"><span class="t">09:40</span><span class="e">Spotlights &times;4</span></div>
-      <div class="sched-row hi"><span class="t">10:20</span><span class="e">Coffee + poster session I</span></div>
-      <div class="sched-row"><span class="t">11:35</span><span class="e">Invited talk</span></div>
-      <div class="sched-row muted"><span class="t">12:05</span><span class="e">Lunch &middot; topic tables</span></div>
-      <div class="sched-row"><span class="t">13:10</span><span class="e">Invited talk</span></div>
-      <div class="sched-row hi"><span class="t">13:40</span><span class="e">Spotlights &times;4</span></div>
-      <div class="sched-row hi"><span class="t">14:20</span><span class="e">Coffee + poster session II</span></div>
-      <div class="sched-row"><span class="t">15:40</span><span class="e">Invited talk</span></div>
-      <div class="sched-row hi"><span class="t">16:10</span><span class="e">Challenge winners present</span></div>
-      <div class="sched-row"><span class="t">16:20</span><span class="e">Awards &amp; close</span></div>
-      <p class="sched-key"><span class="swatch"></span> Contributed &amp; interactive - 54% of the day</p>
+<!-- ============ SPEAKERS ============ -->
+<section id="speakers" class="section">
+  <div class="wrap">
+    <p class="kicker">Programme</p>
+    <h2>Invited speakers</h2>
+    <div class="people">
+      <article class="person">
+        <div class="person-head">
+          <img class="avatar" src="assets/people/anandkumar.jpg" alt="Anima Anandkumar" width="72" height="72" loading="lazy" decoding="async">
+          <div class="person-id">
+            <h3>Anima Anandkumar</h3>
+            <p class="aff">Caltech</p>
+          </div>
+        </div>
+        <p class="bio">Bren Professor of Computing and Mathematical Sciences. Neural operators for learning the dynamics of physical systems, and their use as fast surrogates for numerical simulation. Previously senior director of AI research at NVIDIA.</p>
+      </article>
+      <article class="person">
+        <div class="person-head">
+          <img class="avatar" src="assets/people/balestriero.jpg" alt="Randall Balestriero" width="72" height="72" loading="lazy" decoding="async">
+          <div class="person-id">
+            <h3>Randall Balestriero</h3>
+            <p class="aff">Brown University</p>
+          </div>
+        </div>
+        <p class="bio">Co-author of PLDM, one of the few papers that bridges planning and latent dynamics models, and of the Cookbook of Self-Supervised Learning with Yann LeCun. Learnable signal processing for noisy, non-stationary time series.</p>
+      </article>
+      <article class="person">
+        <div class="person-head">
+          <img class="avatar" src="assets/people/hulsebos.jpg" alt="Madelon Hulsebos" width="72" height="72" loading="lazy" decoding="async">
+          <div class="person-id">
+            <h3>Madelon Hulsebos</h3>
+            <p class="aff">CWI Amsterdam</p>
+          </div>
+        </div>
+        <p class="bio">Leads the Table Representation Learning Lab at CWI and founded the Table Representation Learning workshop series at NeurIPS. Representation learning and generative models for tabular data.</p>
+      </article>
+      <article class="person">
+        <div class="person-head">
+          <img class="avatar" src="assets/people/dubrawski.jpg" alt="Artur Dubrawski" width="72" height="72" loading="lazy" decoding="async">
+          <div class="person-id">
+            <h3>Artur Dubrawski</h3>
+            <p class="aff">Carnegie Mellon University</p>
+          </div>
+        </div>
+        <p class="bio">Alumni Research Professor of Computer Science and director of the Auton Lab. Machine learning for monitoring real systems, from public health and safety to the condition of equipment.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -228,45 +207,20 @@
   <div class="wrap grid-2">
     <div>
       <p class="kicker">The challenge</p>
-      <h2>We will match you with a team.</h2>
-      <div class="prose">
-        <p>
-          One task, set by us and released with the call for papers. Given logged state, action
-          and outcome data from a real structured system, predict the effect of an action nobody
-          took. Scored on held-out <em>interventions</em>, not held-out time.
-        </p>
-        <p>
-          No interventional benchmark exists today for relational or telemetry data. Building one
-          is the point.
-        </p>
-        <p>
-          The winning team presents on the day and takes a substantial cash prize, alongside an
-          equally substantial award for best paper.
-        </p>
-      </div>
+      <h2>Predict the effect of an action nobody took.</h2>
     </div>
-    <div>
-      <div class="sponsor-tiers">
-        <div class="tier">
-          <span class="tier-name">Enter as a team</span>
-          <span class="tier-desc">Spanning at least two institutions. Assemble it yourself.</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Or enter alone, and we match you</span>
-          <span class="tier-desc">Tell us what you can contribute, what you want to learn, and how much time you have. We build the team around you, across institutions.</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Public leaderboard</span>
-          <span class="tier-desc">Top entries verified by re-running the code</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Winners present</span>
-          <span class="tier-desc">10 minutes on the main programme, then the prize</span>
-        </div>
-      </div>
-      <p class="note">
-        Most workshops hope collaborations happen in the coffee break. This one builds them on
-        purpose.
+    <div class="prose">
+      <p>
+        One task, released with the call for papers. Given logged state, action and outcome data
+        from a real structured system, predict the outcome of an intervention that is absent from
+        the logs. Scored on held-out <em>interventions</em>, not held-out time. No interventional
+        benchmark exists today for relational or telemetry data.
+      </p>
+      <p>
+        Enter as a team, or enter alone and we match you. Matching runs through February, on what
+        you can contribute and when you are free, and every team spans at least two institutions.
+        The leaderboard opens in March and the winners present on the day.
+        <strong>EUR 2,000 to the winning team.</strong>
       </p>
     </div>
   </div>
@@ -280,36 +234,41 @@
     <ol class="timeline">
       <li class="tl now">
         <span class="tl-date">Oct 2026</span>
-        <span class="tl-title">Workshop proposal submitted to ICLR</span>
+        <span class="tl-title">Proposal submitted to ICLR</span>
         <span class="tl-note">We are here</span>
       </li>
       <li class="tl">
         <span class="tl-date">Dec 2026</span>
-        <span class="tl-title">ICLR workshop decisions</span>
-        <span class="tl-note">Around 30% of proposals are accepted</span>
+        <span class="tl-title">ICLR decision &middot; challenge announced</span>
+        <span class="tl-note">Registration opens</span>
       </li>
       <li class="tl">
         <span class="tl-date">Jan 2027</span>
-        <span class="tl-title">Paper submission deadline</span>
-        <span class="tl-note">4 pages + short-paper track, OpenReview</span>
+        <span class="tl-title">Paper deadline &middot; challenge registration closes</span>
+        <span class="tl-note">Four pages, OpenReview</span>
+      </li>
+      <li class="tl">
+        <span class="tl-date">Feb 2027</span>
+        <span class="tl-title">Team matching</span>
+        <span class="tl-note">Every team spans at least two institutions</span>
       </li>
       <li class="tl">
         <span class="tl-date">Mar 2027</span>
-        <span class="tl-title">Author notification</span>
-        <span class="tl-note">Fixed by ICLR, non-extendable</span>
+        <span class="tl-title">Leaderboard opens &middot; author notification</span>
+        <span class="tl-note">Two months to the workshop</span>
       </li>
       <li class="tl">
         <span class="tl-date">29-30 Apr 2027</span>
-        <span class="tl-title">Workshop</span>
-        <span class="tl-note">Full day, in person, after the main conference</span>
+        <span class="tl-title">Workshop &middot; winning team presents</span>
+        <span class="tl-note">Full day, in person</span>
       </li>
     </ol>
-    <p class="note">Dates before December are projected from the ICLR 2026 cycle and will be fixed once ICLR publishes its 2027 call for workshops. The ICLR 2027 venue has not yet been announced.</p>
+    <p class="note">Dates before December are projected from the ICLR 2026 cycle and will be fixed once ICLR publishes its call for workshops. The ICLR 2027 venue has not yet been announced.</p>
   </div>
 </section>
 
-<!-- ============ PEOPLE ============ -->
-<section id="people" class="section section-alt">
+<!-- ============ ORGANIZERS ============ -->
+<section id="organizers" class="section section-alt">
   <div class="wrap">
     <p class="kicker">Committee</p>
     <h2>Organizers</h2>
@@ -322,43 +281,17 @@
             <p class="aff">Prior Labs &middot; University of Freiburg</p>
           </div>
         </div>
-        <p class="bio">AI Scientist and PhD student. Research lead of the TabArena benchmark. Works on tabular foundation models and on evaluating them honestly.</p>
+        <p class="bio">AI Scientist. Leads TabArena, a living benchmark for tabular machine learning, and works on evaluating tabular foundation models honestly.</p>
       </article>
       <article class="person">
         <div class="person-head">
-          <!-- Drop assets/people/mazzoleni.jpg in and replace this block with an
-               <img class="avatar" ...> to swap the monogram for the photo. -->
-          <span class="avatar avatar-mono" aria-hidden="true">CM</span>
+          <img class="avatar" src="assets/people/dey.jpg" alt="Sharmita Dey" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
-            <h3>Camilla Mazzoleni</h3>
-            <p class="aff">Forgis</p>
-          </div>
-        </div>
-        <p class="bio">Co-founder. Research on learned models of industrial systems.</p>
-      </article>
-      <article class="person">
-        <div class="person-head">
-          <!-- Drop assets/people/petersen.jpg in and replace this block with an
-               <img class="avatar" ...> to swap the monogram for the photo. -->
-          <span class="avatar avatar-mono" aria-hidden="true">JP</span>
-          <div class="person-id">
-            <h3>Jonas Petersen</h3>
-            <p class="aff">Forgis</p>
-          </div>
-        </div>
-        <p class="bio">Co-founder and Head of Research. World models for industrial process and telemetry data at scale.</p>
-      </article>
-      <article class="person">
-        <div class="person-head">
-          <!-- Drop assets/people/bayrooti.jpg in and replace this block with an
-               <img class="avatar" ...> to swap the monogram for the photo. -->
-          <span class="avatar avatar-mono" aria-hidden="true">JB</span>
-          <div class="person-id">
-            <h3>Jasmine Bayrooti</h3>
+            <h3>Sharmita Dey</h3>
             <p class="aff">ETH Zurich</p>
           </div>
         </div>
-        <p class="bio">Learned dynamics you can act on: ICLR 2025 and NeurIPS 2025 on optimistic Thompson sampling for model-based RL, where the agent plans against a dynamics model that knows what it does not know. Also self-supervised representation learning and multi-agent RL. PhD Cambridge; DeepMind scholar.</p>
+        <p class="bio">Postdoctoral researcher in the Sensory-Motor Systems Lab. Learning from simulated interactions with world models, multimodal self-supervised learning for biosignals, and inductive bias in time-series pretraining.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -368,158 +301,38 @@
             <p class="aff">Stanford University</p>
           </div>
         </div>
-        <p class="bio">PhD student in AI for Science. Representation learning and learned simulators for time-domain astrophysics; agent evaluation. Stanford AI Lab, ICME and KIPAC.</p>
+        <p class="bio">PhD student in Computational and Mathematical Engineering, working on AI for science. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
       </article>
-      <article class="person person-open">
-        <div class="person-head">
-          <span class="avatar avatar-mono avatar-open" aria-hidden="true">+</span>
-          <div class="person-id">
-            <h3>You?</h3>
-            <p class="aff">Two open seats</p>
-          </div>
-        </div>
-        <p class="bio">We are looking for two more organizers, with priority for researchers based outside Europe and North America, and for people working on causal or interventional dynamics.</p>
-        <a class="inline-link" href="#join">Get in touch &rarr;</a>
-      </article>
-    </div>
-
-    <h2 class="h2-sub">Advisory board</h2>
-    <p class="note">To be announced.</p>
-
-    <h2 class="h2-sub">Invited speakers</h2>
-    <div class="people">
       <article class="person">
         <div class="person-head">
-          <img class="avatar" src="assets/people/balestriero.jpg" alt="Randall Balestriero" width="72" height="72" loading="lazy" decoding="async">
+          <span class="avatar avatar-mono" aria-hidden="true">JB</span>
           <div class="person-id">
-            <h3>Randall Balestriero</h3>
-            <p class="aff">Brown University</p>
+            <h3>Jasmine Bayrooti</h3>
+            <p class="aff">University of Cambridge</p>
           </div>
         </div>
-        <p class="bio">The theory of joint-embedding world models, and one of the few people already working on both halves of this room. Co-author of PLDM - planning with latent dynamics models - which is one of the handful of papers that bridges the two literatures at all, and of Meta&rsquo;s Cookbook of Self-Supervised Learning with Yann LeCun. A decade of learnable signal processing for noisy, non-stationary time series, from parametrised wavelets to NASA&rsquo;s Mars SEIS mission.</p>
+        <p class="bio">PhD student in the Prorok Lab, supported by a DeepMind Scholarship. ICLR 2025 on optimistic Thompson sampling for model-based RL, where the agent plans against a dynamics model that knows what it does not know.</p>
       </article>
-      <article class="person person-open">
+      <article class="person">
         <div class="person-head">
-          <span class="avatar avatar-mono avatar-open" aria-hidden="true">+</span>
+          <span class="avatar avatar-mono" aria-hidden="true">CM</span>
           <div class="person-id">
-            <h3>Three more</h3>
-            <p class="aff">To be announced</p>
+            <h3>Camilla Mazzoleni</h3>
+            <p class="aff">Forgis</p>
           </div>
         </div>
-        <p class="bio">Confirmations are being collected ahead of the proposal deadline. All talks are in person unless noted.</p>
+        <p class="bio">Co-founder. Learned models of industrial systems.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SPONSORS ============ -->
-<section id="sponsors" class="section">
-  <div class="wrap grid-2">
-    <div>
-      <p class="kicker">Support</p>
-      <h2>Sponsors</h2>
-      <div class="prose">
-        <p>
-          Sponsorship funds the lunch, the best-paper and challenge prizes, student travel
-          grants and the evening social. The ask is EUR 500-5,000, and every
-          sponsor gets a logo on this site and a dedicated slide in the opening presentation.
-        </p>
-        <p>
-          <strong>Sponsors pay vendors and recipients directly.</strong> Catering is invoiced to
-          the sponsor, travel grants are reimbursed by the sponsor, award money is paid by the
-          sponsor to the winner. No funds pass through organizer accounts.
-        </p>
-        <p class="small">
-          Sponsors have no role in peer review or programme selection, and sponsorship does not
-          secure an industry spotlight slot - those are selected on technical content. One
-          organizer is affiliated with SAP and two are at Forgis; all three organizations
-          sponsor, and submissions from an organizer's institution are assigned to unaffiliated
-          reviewers. We state this publicly and we mean it.
-        </p>
-      </div>
-    </div>
-    <div>
-      <div class="sponsor-tiers">
-        <div class="tier">
-          <span class="tier-name">Lunch</span>
-          <span class="tier-desc">The catered lunch and the topic tables - the highest-visibility hour of the day</span>
+      <article class="person">
+        <div class="person-head">
+          <span class="avatar avatar-mono" aria-hidden="true">JP</span>
+          <div class="person-id">
+            <h3>Jonas Petersen</h3>
+            <p class="aff">Forgis</p>
+          </div>
         </div>
-        <div class="tier">
-          <span class="tier-name">Best paper prize</span>
-          <span class="tier-desc">Named, announced from the stage, permanent on this site</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Challenge prize</span>
-          <span class="tier-desc">Named, awarded to the winning cross-institutional team</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Student travel grants</span>
-          <span class="tier-desc">Merit and need based, prioritising accepted authors</span>
-        </div>
-        <div class="tier">
-          <span class="tier-name">Evening social</span>
-          <span class="tier-desc">The part of the day people actually remember</span>
-        </div>
-      </div>
-      <div class="sponsor-logos">
-        <!-- Add a logo chip only once the sponsorship and logo permission are both
-             confirmed in writing. See README. -->
-        <span class="logo-chip confirmed">Forgis</span>
-        <span class="logo-chip pending">More to be announced</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ JOIN ============ -->
-<section id="join" class="section join">
-  <div class="wrap">
-    <p class="kicker">Get involved</p>
-    <h2>Three ways in.</h2>
-    <div class="cards cards-3">
-      <article class="card card-cta">
-        <h3>Co-organize</h3>
-        <p>Two seats remain. We especially want researchers based outside Europe and North America, and people working on causal or interventional dynamics. Expect roughly two hours a week until April 2027.</p>
+        <p class="bio">Co-founder and Head of Research. World models for industrial process and telemetry data at scale.</p>
       </article>
-      <article class="card card-cta">
-        <h3>Review</h3>
-        <p>We are building a program committee across world models, tabular and time-series foundation models, causal dynamics and applied structured ML. Three to four papers each, four pages, one week.</p>
-      </article>
-      <article class="card card-cta">
-        <h3>Sponsor</h3>
-        <p>Fund the lunch, the best-paper or challenge prize, or travel grants. Structured data is where industry and research overlap most; this is the room to be in.</p>
-      </article>
-    </div>
-    <div class="contact">
-      <p>Write to <a href="mailto:iclr-wmsd-organizers@googlegroups.com">iclr-wmsd-organizers@googlegroups.com</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LINEAGE ============ -->
-<section class="section section-alt">
-  <div class="wrap">
-    <p class="kicker">Where this comes from</p>
-    <h2>A new workshop, not a new edition</h2>
-    <div class="prose">
-      <p>
-        WMSD is a first edition. It draws on the community assembled by Foundation Models for
-        Structured Data at ICML 2025 and 2026, which showed there is a large audience for
-        structured data as a first-class modality - and it asks a different question. FMSD is
-        about models that predict. This one is about models that act.
-      </p>
-    </div>
-    <div class="prior">
-      <a class="prior-item" href="https://icml-structured-fm-workshop.github.io/" target="_blank" rel="noopener">
-        <span class="prior-year">2026</span>
-        <span class="prior-name">FMSD @ ICML 2026</span>
-        <span class="prior-note">Seoul &middot; where much of this community met</span>
-      </a>
-      <a class="prior-item" href="https://icml-structured-fm-workshop.github.io/2025/" target="_blank" rel="noopener">
-        <span class="prior-year">2025</span>
-        <span class="prior-name">FMSD @ ICML 2025</span>
-        <span class="prior-note">Vancouver &middot; 99 submissions, 500+ attendees</span>
-      </a>
     </div>
   </div>
 </section>
@@ -530,10 +343,10 @@
   <div class="wrap footer-inner">
     <div>
       <p class="foot-brand">WMSD @ ICLR 2027</p>
-      <p class="foot-note">World Models for Structured Data. A proposed ICLR 2027 workshop, organized with Forgis and Prior Labs.</p>
+      <p class="foot-note">World Models for Structured Data. A proposed ICLR 2027 workshop. It draws on the community assembled by Foundation Models for Structured Data at ICML 2025 and 2026, and asks a different question.</p>
     </div>
     <div class="foot-links">
-      <a href="mailto:iclr-wmsd-organizers@googlegroups.com">Contact</a>
+      <a href="mailto:jonas.petersen@forgis.com">Contact</a>
       <a href="https://iclr.cc/Conferences/2027" target="_blank" rel="noopener">ICLR 2027</a>
     </div>
   </div>
