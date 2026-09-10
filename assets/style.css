@@ -13,13 +13,13 @@
   --panel:    #202e35;
 
   /* Derived */
-  /* steel itself reads too heavy across a full page, so the ground is a lighter step of it */
-  --bg:        #c0c5c6;
+  /* paper ground; the dark hero and footer bands carry the brand colour */
+  --bg:        #f4f4f2;
   --text:      var(--gunmetal);
-  --text-dim:  #1b2a31;
-  --text-mute: #243239;
-  --rule:      rgba(18, 33, 40, 0.20);
-  --rule-soft: rgba(18, 33, 40, 0.12);
+  --text-dim:  #253238;
+  --text-mute: #4a5860;
+  --rule:      rgba(18, 33, 40, 0.16);
+  --rule-soft: rgba(18, 33, 40, 0.09);
   --on-dark:      #e9eef0;
   --on-dark-dim:  #c2cbcf;
   --on-dark-mute: #93a0a5;
