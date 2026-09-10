@@ -331,7 +331,17 @@ p { margin: 0 0 0.9em; }
 
   .hero { padding: 52px 0 46px; }
   .hero-meta { gap: 22px 32px; margin-top: 32px; }
-  .section { padding: 44px 0; }
+  /* on a phone the body is one long scroll, so sections alternate ground
+     and the tone change replaces the hairline as the divider */
+  .section { padding: 54px 0; border-bottom: 0; }
+  main .section:nth-of-type(even) { background: #fff; }
+  .section h2 { font-size: 1.32rem; }
+  .kicker { margin-bottom: 14px; }
+  .kicker::before {
+    content: ""; display: block;
+    width: 26px; height: 2px; background: var(--gunmetal);
+    margin-bottom: 16px;
+  }
   .wrap { padding: 0 20px; }
   .footer-inner { flex-direction: column; gap: 22px; }
   .foot-links { flex-direction: row; flex-wrap: wrap; gap: 18px; }
