@@ -10,7 +10,11 @@
   --flicker:  #DC4B07;
   --steel:    #878f92;
   --light:    #dde0e0;   /* Forgis --color-light, the ground used on forgis.com */
-  --raise:    #f1f3f3;   /* the same grey lifted, for alternating bands */
+  /* alternating band: --light lifted toward white. not a new brand colour,
+     a 60/40 mix of two palette tokens. forgis.com derives its in-between
+     tones the same way. hex first as a fallback for older browsers. */
+  --raise:    #f1f3f3;
+  --raise:    color-mix(in oklab, var(--light) 40%, #fff 60%);
   --gunmetal: #122128;
   --panel:    #202e35;
 
