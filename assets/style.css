@@ -9,12 +9,13 @@
   --fire:     #FF4D00;
   --flicker:  #DC4B07;
   --steel:    #878f92;
+  --light:    #dde0e0;   /* Forgis --color-light, the ground used on forgis.com */
   --gunmetal: #122128;
   --panel:    #202e35;
 
   /* Derived */
-  /* paper ground; the dark hero and footer bands carry the brand colour */
-  --bg:        #f4f4f2;
+  /* the Forgis light ground; dark hero and footer bands carry the brand colour */
+  --bg:        var(--light);
   --text:      var(--gunmetal);
   --text-dim:  #253238;
   --text-mute: #4a5860;
