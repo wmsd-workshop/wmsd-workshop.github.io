@@ -307,7 +307,8 @@ p { margin: 0 0 0.9em; }
 /* ---------- small screens ---------- */
 
 @media (max-width: 760px) {
-  .topbar { position: relative; }
+  /* stays pinned; the bar is compact enough not to cost much screen */
+  .topbar { position: sticky; top: 0; }
   .topbar-inner { min-height: 54px; }
   .nav-toggle { display: block; }
 
