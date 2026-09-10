@@ -10,6 +10,7 @@
   --flicker:  #DC4B07;
   --steel:    #878f92;
   --light:    #dde0e0;   /* Forgis --color-light, the ground used on forgis.com */
+  --raise:    #f1f3f3;   /* the same grey lifted, for alternating bands */
   --gunmetal: #122128;
   --panel:    #202e35;
 
@@ -186,9 +187,10 @@ p { margin: 0 0 0.9em; }
 
 /* ---------- sections ---------- */
 
-/* sections alternate ground; the tone change is the divider, so no hairline */
+/* sections alternate ground; the tone change is the divider, so no hairline.
+   the lift is ~7 L*, enough to read as a break, short of white's glare */
 .section { padding: 68px 0; }
-main .section:nth-of-type(even) { background: #fff; }
+main .section:nth-of-type(even) { background: var(--raise); }
 .section h2 { color: var(--gunmetal); font-weight: 700; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 26px; }
