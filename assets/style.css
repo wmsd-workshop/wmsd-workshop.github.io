@@ -13,7 +13,8 @@
   --panel:    #202e35;
 
   /* Derived */
-  --bg:        var(--steel);
+  /* steel itself reads too heavy across a full page, so the ground is a lighter step of it */
+  --bg:        #c0c5c6;
   --text:      var(--gunmetal);
   --text-dim:  #1b2a31;
   --text-mute: #243239;
