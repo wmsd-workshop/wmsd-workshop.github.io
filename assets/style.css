@@ -300,9 +300,10 @@ p { margin: 0 0 0.9em; }
   color: var(--on-dark-mute); margin: 0;
 }
 .partner-mark { display: inline-flex; align-items: center; color: var(--on-dark); }
-.partner-mark svg { height: 19px; width: auto; display: block; }
-/* the Prior mark carries fine linework in its glyph, so it needs a little more height */
-.partner-prior svg { height: 23px; }
+.partner-mark svg { height: 22px; width: auto; display: block; }
+/* Forgis is set larger so its cap height matches PRIOR's - the 'g' descender
+   means equal box heights would make it read smaller */
+.partner-forgis svg { height: 28px; }
 
 /* ---------- small screens ---------- */
 
