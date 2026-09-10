@@ -84,7 +84,7 @@
   <div class="wrap grid-2">
     <div>
       <p class="kicker">The workshop</p>
-      <h2>Dynamics you can act on, over state that is recorded rather than filmed.</h2>
+      <h2>Two literatures, one open problem: models of structured state you can act on.</h2>
     </div>
     <div class="prose">
       <p>
@@ -92,18 +92,25 @@
         first eight months of 2026. Nearly all of them are about pixels and robots.
       </p>
       <p>
-        The structured-data corner is young, and it is where the growth now is. Of the 23
-        world-model papers that also mention time series, 13 appeared in 2026 alone, and two
-        thirds of the tabular ones are from the last two years. Over the same period TabPFN,
+        Over the same period a second literature solved a different half of the problem. TabPFN,
         Chronos, TimesFM, Moirai, KumoRFM and RelBench established that one model can transfer
-        across schemas - all of them trained observationally, to predict rather than to act.
+        across schemas, and they are very good at saying what happens next.
       </p>
       <p>
-        WMSD is organised around one question: what would it take to build action-conditioned,
-        interventionally valid dynamics models over structured state? Concretely,
-        <strong>what replaces the inductive bias that images give for free</strong>? Sometimes the
-        answer is a foreign-key graph, a process topology or an event grammar; sometimes it is the
-        real geometry of where the sensors sit. The field has not settled it.
+        <strong>How the two halves compose is an open problem, and it is the workshop.</strong>
+        A predictive foundation model is a candidate component of a world model - a learned
+        transition function, a prior, the observational half of a causal model - and causal
+        predictive models are an obvious thing to put in the loop. Nobody has settled what that
+        interface looks like, what the action space is when the object is a database, or
+        <strong>what replaces the inductive bias that images give for free</strong>: sometimes a
+        foreign-key graph or a process topology, sometimes the real geometry of where the sensors
+        sit.
+      </p>
+      <p>
+        The structured-data corner is small but it is where the growth is: of the 23 world-model
+        papers that also mention time series, 13 appeared in 2026 alone. We want work from both
+        sides and from the middle, and we would rather the two communities argue in one room than
+        publish past each other.
       </p>
     </div>
   </div>
@@ -115,6 +122,10 @@
     <p class="kicker">Call for papers</p>
     <h2>Scope</h2>
     <div class="cards">
+      <article class="card">
+        <h3>Predictive foundation models in the loop</h3>
+        <p>How TabPFN-, Chronos- or RelBench-style models compose with dynamics and planning: as learned transition functions, as priors, or as the observational half of a causal model.</p>
+      </article>
       <article class="card">
         <h3>Action-conditioned dynamics</h3>
         <p>Models of relational, tabular, event-stream and telemetry state that take an action and predict a consequence.</p>
@@ -159,7 +170,7 @@
           <img class="avatar" src="assets/people/balestriero.jpg" alt="Randall Balestriero" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Randall Balestriero</h3>
-            <p class="aff">Brown University</p>
+            <p class="aff">Assistant Professor &middot; Brown University</p>
           </div>
         </div>
         <p class="bio">Co-author of PLDM, one of the few papers that bridges planning and latent dynamics models, and of the Cookbook of Self-Supervised Learning with Yann LeCun. Learnable signal processing for noisy, non-stationary time series.</p>
@@ -169,20 +180,20 @@
           <img class="avatar" src="assets/people/hulsebos.jpg" alt="Madelon Hulsebos" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Madelon Hulsebos</h3>
-            <p class="aff">CWI Amsterdam</p>
+            <p class="aff">Tenured researcher &middot; CWI Amsterdam</p>
           </div>
         </div>
-        <p class="bio">Tenured researcher at CWI, where she leads the Table Representation Learning Lab, and faculty at ELLIS Amsterdam. She founded the Table Representation Learning workshop series at NeurIPS and ACL.</p>
+        <p class="bio">Leads the Table Representation Learning Lab at CWI and is faculty at ELLIS Amsterdam. She founded the Table Representation Learning workshop series at NeurIPS and ACL.</p>
       </article>
       <article class="person">
         <div class="person-head">
           <img class="avatar" src="assets/people/dubrawski.jpg" alt="Artur Dubrawski" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Artur Dubrawski</h3>
-            <p class="aff">Carnegie Mellon University</p>
+            <p class="aff">Research Professor &middot; Carnegie Mellon University</p>
           </div>
         </div>
-        <p class="bio">Research Professor in the Robotics Institute and one of the directors of the Auton Lab. Machine learning for monitoring real systems, from public health and safety to the condition of equipment.</p>
+        <p class="bio">One of three directors of the Auton Lab, in the Robotics Institute. Machine learning for monitoring real systems, from public health and safety to the condition of equipment.</p>
       </article>
       <article class="person person-open">
         <div class="person-head">
@@ -297,7 +308,7 @@
             <p class="aff">Stanford University</p>
           </div>
         </div>
-        <p class="bio">PhD student in Computational and Mathematical Engineering, working on AI for science. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
+        <p class="bio">PhD student in AI for science and lead of Terminal-Bench-Science, a benchmark evaluating AI agents on real research workflows. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -339,10 +350,10 @@
           <img class="avatar" src="assets/people/anandkumar.jpg" alt="Anima Anandkumar" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Anima Anandkumar</h3>
-            <p class="aff">Caltech</p>
+            <p class="aff">Bren Professor &middot; Caltech</p>
           </div>
         </div>
-        <p class="bio">Bren Professor of Computing and Mathematical Sciences, and a member of the UN Secretary-General&rsquo;s Scientific Advisory Board. Neural operators for learning the dynamics of physical systems, and their use as fast surrogates for numerical simulation. Previously senior director of AI research at NVIDIA.</p>
+        <p class="bio">Member of the UN Secretary-General&rsquo;s Scientific Advisory Board. Neural operators for learning the dynamics of physical systems, and their use as fast surrogates for numerical simulation. Previously senior director of AI research at NVIDIA.</p>
       </article>
       <article class="person person-open">
         <div class="person-head">
