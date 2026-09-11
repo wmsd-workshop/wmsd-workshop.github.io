@@ -15,6 +15,7 @@ and a two-line email avoids an awkward one later.
 | `dey.jpg` | Sharmita Dey | [sms.hest.ethz.ch](https://sms.hest.ethz.ch/the-group/team/sharmita-dey.html) SMS Lab team photo | **not asked** |
 | `dillmann.jpg` | Steven Dillmann | [stevendillmann.github.io](https://stevendillmann.github.io/) profile image | **not asked** |
 | `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** |
+| `koyejo.jpg` | Sanmi Koyejo | [stairlab.stanford.edu](https://stairlab.stanford.edu/members/sanmi_koyejo.html) lab portrait, 1953x1953 studio shot downscaled to 600x600 | **not asked** |
 | `mazzoleni.jpg` | Camilla Mazzoleni | cropped from the Forgis founders photo published by [startupticker.ch](https://www.startupticker.ch/en/news/4-5m-pre-seed-funding-to-fuel-the-next-industrial-revolution) | **not asked** - see note below |
 | `petersen.jpg` | Jonas Petersen | [jonaspetersen.com](https://www.jonaspetersen.com/) profile image, which he publishes himself | own photo |
 | `hulsebos.jpg` | Madelon Hulsebos | [madelonhulsebos.com](https://www.madelonhulsebos.com/) profile image | **not asked** |
