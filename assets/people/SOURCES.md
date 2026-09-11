@@ -23,6 +23,10 @@ and a two-line email avoids an awkward one later.
 
 All are cropped square and saved at 600x600.
 
+**Yoo-Min Jung has no photo yet.** Her card shows initials instead. GitHub ([yoom618](https://github.com/yoom618)) has a placeholder avatar, not a face, she publishes no personal
+site, and LinkedIn refuses anonymous fetches. Ask her for a headshot, save it as `jung.jpg`
+at 600x600, and swap the initials span for an `img` tag.
+
 CWI also publishes a headshot of Madelon Hulsebos, but it is 160x240 and black and white, which
 would clash with the rest of the set. Her own site's photo is the better one and is the one used.
 
