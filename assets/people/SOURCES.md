@@ -16,7 +16,6 @@ and a two-line email avoids an awkward one later.
 | `dillmann.jpg` | Steven Dillmann | [stevendillmann.github.io](https://stevendillmann.github.io/) profile image | **not asked** |
 | `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** |
 | `koyejo.jpg` | Sanmi Koyejo | [stairlab.stanford.edu](https://stairlab.stanford.edu/members/sanmi_koyejo.html) lab portrait, 1953x1953 studio shot downscaled to 600x600 | **not asked** |
-| `mazzoleni.jpg` | Camilla Mazzoleni | cropped from the Forgis founders photo published by [startupticker.ch](https://www.startupticker.ch/en/news/4-5m-pre-seed-funding-to-fuel-the-next-industrial-revolution) | **not asked** - see note below |
 | `petersen.jpg` | Jonas Petersen | [jonaspetersen.com](https://www.jonaspetersen.com/) profile image, which he publishes himself | own photo |
 | `hulsebos.jpg` | Madelon Hulsebos | [madelonhulsebos.com](https://www.madelonhulsebos.com/) profile image | **not asked** |
 | `purucker.jpg` | Lennart Purucker | [ml.informatik.uni-freiburg.de/profile/purucker](https://ml.informatik.uni-freiburg.de/profile/purucker/) staff photo, cropped to head and shoulders | **not asked** - and this is a podium shot, so ask him for a proper headshot |
@@ -31,12 +30,6 @@ CWI also publishes a headshot of Madelon Hulsebos, but it is 160x240 and black a
 would clash with the rest of the set. Her own site's photo is the better one and is the one used.
 
 ## Notes
-
-`mazzoleni.jpg` is a crop from a three-person press photo, upscaled from roughly 270px, and she
-is laughing and turned away from the camera. It is the only public image available and it is
-serviceable, but it is visibly less formal than the rest of the set. A proper square headshot
-would be a straight improvement - drop it in as `mazzoleni.jpg` at 600x600 and nothing else
-needs to change.
 
 LinkedIn was not usable as a source: it refuses anonymous fetches and the browser extension that
 could read a logged-in session was not connected. Everything above comes from a public page.
