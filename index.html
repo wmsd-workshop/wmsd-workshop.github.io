@@ -69,8 +69,8 @@
     <p class="lede">
       Factories, grids, supply chains, fleets, clinical pathways: the systems we most want to
       plan in are <strong>recorded rather than filmed</strong>. WMSD is
-      <strong>a one-day workshop at ICLR 2027</strong> on world models for that kind of state -
-      dynamics you can roll forward under an action you choose.
+      <strong>a one-day workshop at ICLR 2027</strong> on world models for that kind of state.
+      Models you can roll forward under an action you choose.
     </p>
     <div class="hero-meta">
       <div class="meta-item"><span class="meta-k">Venue</span><span class="meta-v">ICLR 2027</span></div>
@@ -93,25 +93,24 @@
         first eight months of 2026. Nearly all of them are about pixels and robots.
       </p>
       <p>
-        Over the same period a second literature solved a different half of the problem. TabPFN,
+        Meanwhile a second literature has been solving the other half. TabPFN,
         Chronos, TimesFM, Moirai, KumoRFM and RelBench established that one model can transfer
         across schemas, and they are very good at saying what happens next.
       </p>
       <p>
-        <strong>How the two halves compose is an open problem, and it is the workshop.</strong>
-        A predictive foundation model is a candidate component of a world model - a learned
-        transition function, a prior, the observational half of a causal model - and causal
-        predictive models are an obvious thing to put in the loop. Nobody has settled what that
-        interface looks like, what the action space is when the object is a database, or
-        <strong>what replaces the inductive bias that images give for free</strong>: sometimes a
-        foreign-key graph or a process topology, sometimes the real geometry of where the sensors
-        sit.
+        <strong>Nobody has worked out how the two halves fit together. That is the workshop.</strong>
+        You can drop a predictive foundation model into a world model as the transition function,
+        or as a prior, or as the observational half of a causal model, and people are starting to.
+        What nobody has settled is what the action space is when the object is a database, or
+        <strong>what does the job that a pixel grid does for free</strong>. Sometimes that is a
+        foreign-key graph, sometimes a process topology, sometimes just where the sensors
+        physically sit.
       </p>
       <p>
-        The structured-data corner is small but it is where the growth is: of the 23 world-model
-        papers that also mention time series, 13 appeared in 2026 alone. We want work from both
-        sides and from the middle, and we would rather the two communities argue in one room than
-        publish past each other.
+        The structured-data corner is small, and it is where the growth is: of the 23 world-model
+        papers that also mention time series, 13 are from 2026. We want work from both sides and
+        from the middle. We would rather the two communities argue in one room than publish past
+        each other.
       </p>
     </div>
   </div>
@@ -199,7 +198,7 @@
             <p class="aff">KAUST &middot; IDSIA &middot; remote</p>
           </div>
         </div>
-        <p class="bio">Co-author of LSTM, and with David Ha of World Models at NeurIPS 2018. His 1990 technical report already paired a controller network with a world model that planned by rolling out predicted futures over abstract state, years before anyone pointed one at a camera. Directs the AI Initiative at KAUST and has led IDSIA since 1995.</p>
+        <p class="bio">Co-author of LSTM, and with David Ha of the 2018 World Models paper. <em>Making the World Differentiable</em>, his 1990 report, already had a controller network planning against a separate world model over abstract state, years before anyone pointed one at a camera. Directs the AI Initiative at KAUST and has led IDSIA since 1995.</p>
       </article>
       <article class="person person-open">
         <div class="person-head">
@@ -209,7 +208,7 @@
             <p class="aff">To be announced</p>
           </div>
         </div>
-        <p class="bio">One more name to be announced.</p>
+        <p class="bio">We are holding the last slot open.</p>
       </article>
     </div>
   </div>
@@ -310,16 +309,6 @@
       </article>
       <article class="person">
         <div class="person-head">
-          <img class="avatar" src="assets/people/dillmann.jpg" alt="Steven Dillmann" width="72" height="72" loading="lazy" decoding="async">
-          <div class="person-id">
-            <h3>Steven Dillmann</h3>
-            <p class="aff">PhD student &middot; Stanford University</p>
-          </div>
-        </div>
-        <p class="bio">Works on AI for science and leads Terminal-Bench-Science, a benchmark evaluating AI agents on real research workflows. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
-      </article>
-      <article class="person">
-        <div class="person-head">
           <img class="avatar" src="assets/people/bayrooti.jpg" alt="Jasmine Bayrooti" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Jasmine Bayrooti</h3>
@@ -330,13 +319,13 @@
       </article>
       <article class="person">
         <div class="person-head">
-          <img class="avatar" src="assets/people/petersen.jpg" alt="Jonas Petersen" width="72" height="72" loading="lazy" decoding="async">
+          <img class="avatar" src="assets/people/dillmann.jpg" alt="Steven Dillmann" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
-            <h3>Jonas Petersen</h3>
-            <p class="aff">Head of Research &middot; Forgis &middot; ETH Zurich</p>
+            <h3>Steven Dillmann</h3>
+            <p class="aff">PhD student &middot; Stanford University</p>
           </div>
         </div>
-        <p class="bio">Author of HEPA, a spotlight at FMSD @ ICML 2026, and of the SATURN scaling studies: two steps toward time series world models.</p>
+        <p class="bio">Works on AI for science and leads Terminal-Bench-Science, a benchmark evaluating AI agents on real research workflows. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -346,7 +335,17 @@
             <p class="aff">PhD student &middot; Seoul National University</p>
           </div>
         </div>
-        <p class="bio">PhD candidate in industrial engineering and first author of MambaSL at ICLR 2026, a single-layer state space model for time-series classification. Re-evaluated 20 baselines across all 30 UEA datasets under one protocol and released checkpoints for every model, which is the standard the challenge track holds itself to.</p>
+        <p class="bio">PhD candidate in industrial engineering and first author of MambaSL at ICLR 2026, a single-layer state space model for time-series classification. The paper re-runs 20 baselines across all 30 UEA datasets under one protocol and publishes a checkpoint for every one, because the existing numbers were not comparable enough to trust.</p>
+      </article>
+      <article class="person">
+        <div class="person-head">
+          <img class="avatar" src="assets/people/petersen.jpg" alt="Jonas Petersen" width="72" height="72" loading="lazy" decoding="async">
+          <div class="person-id">
+            <h3>Jonas Petersen</h3>
+            <p class="aff">Head of Research &middot; ETH Zurich &middot; Forgis</p>
+          </div>
+        </div>
+        <p class="bio">Author of HEPA, a spotlight at FMSD @ ICML 2026, and of the SATURN scaling studies: two steps toward time series world models.</p>
       </article>
     </div>
 
