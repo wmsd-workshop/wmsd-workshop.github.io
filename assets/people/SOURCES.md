@@ -14,7 +14,8 @@ and a two-line email avoids an awkward one later.
 | `balestriero.jpg` | Randall Balestriero | [randallbalestriero.github.io](https://randallbalestriero.github.io/) profile image, cropped from a wider conference photo | **not asked** |
 | `dey.jpg` | Sharmita Dey | [sms.hest.ethz.ch](https://sms.hest.ethz.ch/the-group/team/sharmita-dey.html) SMS Lab team photo | **not asked** |
 | `dillmann.jpg` | Steven Dillmann | [stevendillmann.github.io](https://stevendillmann.github.io/) profile image | **not asked** |
-| `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** |
+| `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** - *file kept, card off the site for now* |
+| `schmidhuber.jpg` | J&uuml;rgen Schmidhuber | cropped from the portrait on his [KAUST CEMSE profile](https://cemse.kaust.edu.sa/profiles/jurgen-schmidhuber), 1280x720 original downscaled to 600x600 | **not asked** |
 | `koyejo.jpg` | Sanmi Koyejo | [stairlab.stanford.edu](https://stairlab.stanford.edu/members/sanmi_koyejo.html) lab portrait, 1953x1953 studio shot downscaled to 600x600 | **not asked** |
 | `petersen.jpg` | Jonas Petersen | [jonaspetersen.com](https://www.jonaspetersen.com/) profile image, which he publishes himself | own photo |
 | `jung.jpg` | Yoo-Min Jung | her own [Google Scholar](https://scholar.google.com/citations?user=tcFbj6MAAAAJ) profile photo, a studio headshot she published herself | **not asked** - see note below |
