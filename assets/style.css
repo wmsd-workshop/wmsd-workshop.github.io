@@ -36,8 +36,15 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* overflow-x:hidden on html makes it a scroll container, which silently kills
+   position:sticky on the header. clip suppresses the same sideways scroll
+   without creating one. hidden stays as the fallback for older browsers. */
 html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }
+}
 
 body {
   margin: 0;
@@ -117,7 +124,13 @@ p { margin: 0 0 0.9em; }
   position: sticky; top: 0; z-index: 40;
   background: var(--gunmetal);
   border-bottom: 1px solid rgba(233, 238, 240, 0.10);
+  transition: transform 0.25s ease;
 }
+/* tucks away while you read downward; any upward scroll brings it back */
+.topbar.tucked { transform: translateY(-100%); }
+/* the mobile menu hangs off the bottom of the bar, so it must never ride up */
+.topbar.open { transform: none; }
+@media (prefers-reduced-motion: reduce) { .topbar { transition: none; } }
 .topbar-inner {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; min-height: 56px;
@@ -320,9 +333,10 @@ main .section:nth-of-type(even) { background: var(--raise); }
 /* ---------- small screens ---------- */
 
 @media (max-width: 760px) {
-  /* stays pinned; the bar is compact enough not to cost much screen */
+  /* stays pinned; tucks on the way down, returns on the way up */
   .topbar { position: sticky; top: 0; }
   .topbar-inner { min-height: 54px; }
+  html { scroll-padding-top: 70px; }
   .nav-toggle { display: block; }
 
   .nav {

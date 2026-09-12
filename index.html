@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=fd30f618">
+<link rel="stylesheet" href="assets/style.css?v=8675197e">
 </head>
 <body>
 
@@ -432,8 +432,13 @@
   var btn = document.querySelector('.nav-toggle');
   if (!bar || !btn) return;
 
+  var REVEAL_AT = 120;   // never tuck while the hero is still on screen
+  var DEADZONE  = 6;     // ignore trackpad and rubber-band jitter
+  var lastY = 0, hold = 0, queued = false;
+
   function setOpen(open) {
     bar.classList.toggle('open', open);
+    if (open) bar.classList.remove('tucked');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
@@ -442,14 +447,51 @@
     setOpen(!bar.classList.contains('open'));
   });
 
-  // tapping a destination should close the menu behind you
-  bar.querySelectorAll('.nav a').forEach(function (a) {
-    a.addEventListener('click', function () { setOpen(false); });
+  // tapping a destination closes the menu behind you, and pins the bar for a
+  // moment so it does not tuck itself away mid-jump
+  bar.querySelectorAll('.nav a, .brand').forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOpen(false);
+      hold = Date.now() + 700;
+      bar.classList.remove('tucked');
+    });
   });
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && bar.classList.contains('open')) { setOpen(false); btn.focus(); }
   });
+
+  function currentY() {
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    return Math.min(Math.max(y, 0), max);   // clamp iOS overscroll
+  }
+
+  function update() {
+    queued = false;
+    var y = currentY();
+    var dy = y - lastY;
+
+    if (bar.classList.contains('open') || Date.now() < hold || y <= REVEAL_AT) {
+      bar.classList.remove('tucked');
+      lastY = y;
+      return;
+    }
+    if (Math.abs(dy) < DEADZONE) return;
+    bar.classList.toggle('tucked', dy > 0);
+    lastY = y;
+  }
+
+  function onScroll() {
+    if (!queued) { queued = true; window.requestAnimationFrame(update); }
+  }
+
+  lastY = currentY();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { lastY = currentY(); }, { passive: true });
+
+  // never strand a keyboard user tabbing into a bar that is off screen
+  bar.addEventListener('focusin', function () { bar.classList.remove('tucked'); });
 })();
 </script>
 </body>
