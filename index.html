@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WMSD - World Models for Structured Data | ICLR 2027 Workshop</title>
-<meta name="description" content="World Models for Structured Data - proposed workshop at ICLR 2027. The systems we most want to plan in are recorded rather than filmed: action-conditioned dynamics models over relational, tabular and telemetry state.">
+<meta name="description" content="World Models for Structured Data - a proposed workshop at ICLR 2027 on world models for relational, tabular and telemetry state: models you can roll forward under an action you choose.">
 <link rel="canonical" href="https://wmsd-workshop.github.io/">
 
 <meta property="og:site_name" content="WMSD @ ICLR 2027">
@@ -33,11 +33,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=8675197e">
+<link rel="stylesheet" href="assets/style.css?v=28a29f26">
 </head>
 <body>
 
 <a class="skip" href="#about">Skip to content</a>
+
+<!-- icon sprite: referenced by <use> from the person cards -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-scholar" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M256 411.12L0 202.667 256 0l256 202.667zM255.974 512c-48.375 0-88.19-38.375-88.19-88.19V342.5L256 411.12l88.19-68.62v81.31c0 49.815-39.815 88.19-88.216 88.19z"/>
+  </symbol>
+  <symbol id="i-linkedin" viewBox="0 0 448 512">
+    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94.09 0 111.48 61.9 111.48 142.3z"/>
+  </symbol>
+</svg>
 
 <header class="topbar">
   <div class="wrap topbar-inner">
@@ -85,32 +95,33 @@
   <div class="wrap grid-2">
     <div>
       <p class="kicker">The workshop</p>
-      <h2>Two literatures, one open problem: models of structured state you can act on.</h2>
+      <h2>Prediction tells you what happens next. A world model tells you what happens if you act.</h2>
     </div>
     <div class="prose">
       <p>
-        World models are moving quickly: 306 arXiv papers in 2024, 794 in 2025, and 1,530 in the
-        first eight months of 2026. Nearly all of them are about pixels and robots.
+        A factory, a power grid, a supply chain, a hospital ward. For systems like these we have
+        decades of recorded state and very little ability to ask what would have happened had we
+        run them differently. That state arrives as tables, event logs and sensor streams rather
+        than as video, so the world-model literature, which has grown up around pixels and robots,
+        has largely passed it by.
       </p>
       <p>
-        Meanwhile a second literature has been solving the other half. TabPFN,
-        Chronos, TimesFM, Moirai, KumoRFM and RelBench established that one model can transfer
-        across schemas, and they are very good at saying what happens next.
+        A second line of work has been making fast progress on exactly this data. Tabular,
+        time-series and relational foundation models, from TabPFN onward, transfer to schemas they
+        were never trained on and forecast well. What they do is prediction: given the past, what
+        comes next.
       </p>
       <p>
-        <strong>Nobody has worked out how the two halves fit together. That is the workshop.</strong>
-        You can drop a predictive foundation model into a world model as the transition function,
-        or as a prior, or as the observational half of a causal model, and people are starting to.
-        What nobody has settled is what the action space is when the object is a database, or
-        <strong>what does the job that a pixel grid does for free</strong>. Sometimes that is a
-        foreign-key graph, sometimes a process topology, sometimes just where the sensors
-        physically sit.
+        A forecast extrapolates a system as it is being run. A world model rolls it forward under
+        an action you choose, including one nobody took. Prediction is much of the machinery; what
+        is missing is the action, and a notion of state that survives being intervened on.
       </p>
       <p>
-        The structured-data corner is small, and it is where the growth is: of the 23 world-model
-        papers that also mention time series, 13 are from 2026. We want work from both sides and
-        from the middle. We would rather the two communities argue in one room than publish past
-        each other.
+        This workshop is about how the two fit together. Predictive foundation models are already
+        turning up inside dynamics models: as learned transition functions, as priors, as the
+        observational half of a causal model. The questions that raises are still open. The overlap
+        between the two literatures is small, and almost all of it is recent. We want work from both
+        sides, and from the middle.
       </p>
     </div>
   </div>
@@ -121,14 +132,20 @@
   <div class="wrap">
     <p class="kicker">Call for papers</p>
     <h2>Scope</h2>
+    <p class="section-lede">
+      Work on world models for structured state, and work on tabular, time-series and relational
+      foundation models whether or not it involves actions. Work from the embodied and visual side
+      is welcome where it speaks to structured state. The topics below are prompts, not a filter.
+      If your work belongs in this conversation, send it.
+    </p>
     <div class="cards">
       <article class="card">
         <h3>Predictive foundation models in the loop</h3>
-        <p>How TabPFN-, Chronos- or RelBench-style models compose with dynamics and planning: as learned transition functions, as priors, or as the observational half of a causal model.</p>
+        <p>How TabPFN, Chronos, TimesFM, Moirai, KumoRFM, RelBench and their successors compose with dynamics and planning: as learned transition functions, as priors, or as the observational half of a causal model.</p>
       </article>
       <article class="card">
         <h3>Action-conditioned dynamics</h3>
-        <p>Models of relational, tabular, event-stream and telemetry state that take an action and predict a consequence.</p>
+        <p>Models of relational, tabular, event-stream and telemetry state that take an action and return a consequence. What an action even is when the object is a database.</p>
       </article>
       <article class="card">
         <h3>What these models actually capture</h3>
@@ -136,7 +153,7 @@
       </article>
       <article class="card">
         <h3>Latent state and inductive bias</h3>
-        <p>Sufficiency, abstraction and identifiability when structure comes from a schema, a graph, a process topology or the real geometry of where the sensors sit, rather than from an image lattice.</p>
+        <p>Sufficiency, abstraction and identifiability when structure comes from a schema, a graph, a process topology, or simply where the sensors physically sit. What does the job that a pixel grid does for free?</p>
       </article>
       <article class="card">
         <h3>Learned simulators and digital twins</h3>
@@ -156,10 +173,8 @@
       </article>
     </div>
     <p class="note">
-      <strong>Work on tabular, time-series and relational foundation models is in scope whether
-      or not it involves actions.</strong> Four pages, non-archival, double-blind on OpenReview,
-      plus a short-paper track. Novelty is not required and negative results are welcome.
-      Out of scope: embodied and visual world models, and clinical trial simulation.
+      Four pages, non-archival, double-blind on OpenReview, plus a short-paper track. Novelty is
+      not required and negative results are welcome.
     </p>
   </div>
 </section>
@@ -223,18 +238,23 @@
     </div>
     <div class="prose">
       <p>
-        One task, released with the call for papers. Given logged state, action and outcome data
-        from a real structured system, predict the outcome of an intervention that is absent from
-        the logs. Scored on held-out <em>interventions</em>, not held-out time. No interventional
-        benchmark exists today for relational or telemetry data.
+        One task, released with the call for papers. We publish logged state, action and outcome
+        data from a real structured system. You submit predicted outcomes for a set of
+        interventions that are absent from those logs. Entries are scored on held-out
+        <em>interventions</em>, not held-out time, because no interventional benchmark exists
+        today for relational or telemetry data.
       </p>
       <p>
-        A strong purely predictive model is a legitimate entry, and finding out how far one gets
-        is part of the question. Enter as a team, or enter alone and we match you. Matching runs
-        through February, on what you can contribute and when you are free, and every team spans
-        at least two institutions.
-        The leaderboard opens in March and closes when ICLR begins on 26 April; the winning team presents at the workshop.
-        <strong>EUR 2,000 to the winning team.</strong>
+        <strong>It is a separate track from the call for papers.</strong> Papers are not expected
+        to address the challenge, challenge entries are not reviewed as papers, and you can enter
+        either, both or neither. A strong purely predictive model is a legitimate entry, and
+        finding out how far one gets is part of the question.
+      </p>
+      <p>
+        Enter as a team, or enter alone and we match you. Matching runs through February on what
+        you can contribute and when you are free, and every team spans at least two institutions.
+        The leaderboard opens in March and closes when ICLR begins on 26 April. The winning team
+        presents at the workshop and receives <strong>EUR 2,000</strong>.
       </p>
     </div>
   </div>
@@ -286,16 +306,19 @@
   <div class="wrap">
     <p class="kicker">Committee</p>
     <h2>Organizers</h2>
-    <div class="people">
+    <div class="people people-compact">
       <article class="person">
         <div class="person-head">
           <img class="avatar" src="assets/people/purucker.jpg" alt="Lennart Purucker" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Lennart Purucker</h3>
             <p class="aff">AI Scientist &middot; Prior Labs</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=x_HyTt0AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Lennart Purucker on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/lennart-purucker/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Lennart Purucker on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">PhD student with Frank Hutter at the University of Freiburg. Core maintainer of TabArena, a living benchmark for tabular machine learning, and co-organiser of Foundation Models for Structured Data at ICML 2025 and 2026.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -303,9 +326,12 @@
           <div class="person-id">
             <h3>Sharmita Dey</h3>
             <p class="aff">Postdoc &middot; ETH Zurich</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=dRn_bawAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Sharmita Dey on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/sharmita-dey-23087b24/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Sharmita Dey on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Works in the Sensory-Motor Systems Lab on learning from simulated interactions with world models, multimodal self-supervised learning for biosignals, and inductive bias in time-series pretraining.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -313,9 +339,12 @@
           <div class="person-id">
             <h3>Jasmine Bayrooti</h3>
             <p class="aff">Postdoc &middot; ETH Zurich</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=Zpc5-noAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Jasmine Bayrooti on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/jasmine-bayrooti/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Jasmine Bayrooti on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Works with Andreas Krause in the Learning &amp; Adaptive Systems group. PhD in the Prorok Lab at the University of Cambridge, supported by a DeepMind Scholarship. ICLR 2025 on optimistic Thompson sampling for model-based RL, where the agent plans against a dynamics model that knows what it does not know.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -323,9 +352,12 @@
           <div class="person-id">
             <h3>Steven Dillmann</h3>
             <p class="aff">PhD student &middot; Stanford University</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=mwC8O9sAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Steven Dillmann on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/stevendillmann/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Steven Dillmann on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Works on AI for science and leads Terminal-Bench-Science, a benchmark evaluating AI agents on real research workflows. Representation learning for time-domain high-energy astrophysics, including the discovery of a fast X-ray transient in the Chandra archive.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -333,9 +365,12 @@
           <div class="person-id">
             <h3>Yoo-Min Jung</h3>
             <p class="aff">PhD student &middot; Seoul National University</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=tcFbj6MAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Yoo-Min Jung on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/yoo-min-jung-422074140/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Yoo-Min Jung on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">PhD candidate in industrial engineering and first author of MambaSL at ICLR 2026, a single-layer state space model for time-series classification. The paper re-runs 20 baselines across all 30 UEA datasets under one protocol and publishes a checkpoint for every one, because the existing numbers were not comparable enough to trust.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -343,24 +378,30 @@
           <div class="person-id">
             <h3>Jonas Petersen</h3>
             <p class="aff">Head of Research &middot; ETH Zurich &middot; Forgis</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=1x_taE4AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Jonas Petersen on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/jep7" target="_blank" rel="noopener" title="LinkedIn" aria-label="Jonas Petersen on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Author of HEPA, a spotlight at FMSD @ ICML 2026, and of the SATURN scaling studies: two steps toward time series world models.</p>
       </article>
     </div>
 
     <p class="kicker sub">Guidance</p>
     <h2>Advisory board</h2>
-    <div class="people">
+    <div class="people people-compact">
       <article class="person">
         <div class="person-head">
           <img class="avatar" src="assets/people/anandkumar.jpg" alt="Anima Anandkumar" width="72" height="72" loading="lazy" decoding="async">
           <div class="person-id">
             <h3>Prof. Anima Anandkumar</h3>
             <p class="aff">Caltech</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=bEcLezcAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Anima Anandkumar on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/anima-anandkumar" target="_blank" rel="noopener" title="LinkedIn" aria-label="Anima Anandkumar on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Bren Professor of Computing and Mathematical Sciences, and a member of the UN Secretary-General&rsquo;s Scientific Advisory Board. Neural operators for learning the dynamics of physical systems, and their use as fast surrogates for numerical simulation. Previously senior director of AI research at NVIDIA.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -368,9 +409,12 @@
           <div class="person-id">
             <h3>Prof. Sanmi Koyejo</h3>
             <p class="aff">Stanford University</p>
+            <p class="links">
+              <a class="plink" href="https://scholar.google.com/citations?user=EaaOeJwAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Sanmi Koyejo on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+              <a class="plink" href="https://www.linkedin.com/in/sanmi-koyejo-984754" target="_blank" rel="noopener" title="LinkedIn" aria-label="Sanmi Koyejo on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+            </p>
           </div>
         </div>
-        <p class="bio">Associate Professor of Computer Science, director of the Stanford Trustworthy AI Research lab, and a member of the NeurIPS Foundation board. Measurement science for AI evaluation, including the NeurIPS 2023 outstanding paper showing that emergent abilities are an artefact of the chosen metric. TIME100 AI, 2026.</p>
       </article>
       <article class="person person-open">
         <div class="person-head">
@@ -380,9 +424,9 @@
             <p class="aff">To be announced</p>
           </div>
         </div>
-        <p class="bio">We are still adding advisors, particularly in causal and interventional dynamics.</p>
       </article>
     </div>
+    <p class="note">We are still adding advisors, particularly in causal and interventional dynamics.</p>
   </div>
 </section>
 

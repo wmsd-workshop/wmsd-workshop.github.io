@@ -44,6 +44,29 @@ Person cards fall back to a monogram tile when no photo exists. To add one:
 
 No CSS change is needed. Photo provenance is recorded in `assets/people/SOURCES.md`.
 
+## Committee cards
+
+Organiser and advisor cards carry a photo, a name, an affiliation and profile links, and no
+bio. Speaker cards keep their bios: speakers are the draw, organisers are not, and a committee
+list that reads as a CV invites the reader to judge the CV.
+
+The two icons come from a sprite defined once near the top of `index.html`
+(`#i-scholar`, `#i-linkedin`) and are referenced with `<use>`:
+
+```html
+<p class="links">
+  <a class="plink" href="https://scholar.google.com/citations?user=XXXXXXXX"
+     target="_blank" rel="noopener" title="Google Scholar"
+     aria-label="Firstname Surname on Google Scholar"><svg aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a>
+</p>
+```
+
+Omit an icon rather than guess a URL. Every Google Scholar link on the site has been opened and
+checked against the person's name. The LinkedIn URLs cannot be checked the same way, because
+LinkedIn refuses anonymous fetches: Jasmine Bayrooti's and Anima Anandkumar's came from them
+directly, the rest came from search results. Confirm the rest with each person before the site is
+publicised.
+
 ## House rules
 
 - **Never name a sponsor** until the sponsorship is confirmed in writing *and* they have given
