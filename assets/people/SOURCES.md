@@ -17,6 +17,7 @@ and a two-line email avoids an awkward one later.
 | `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** - *file kept, card off the site for now* |
 | `schmidhuber.jpg` | J&uuml;rgen Schmidhuber | cropped from the portrait on his [KAUST CEMSE profile](https://cemse.kaust.edu.sa/profiles/jurgen-schmidhuber), 1280x720 original downscaled to 600x600 | **not asked** |
 | `koyejo.jpg` | Sanmi Koyejo | [stairlab.stanford.edu](https://stairlab.stanford.edu/members/sanmi_koyejo.html) lab portrait, 1953x1953 studio shot downscaled to 600x600 | **not asked** |
+| `leskovec.jpg` | Jure Leskovec | [Wikimedia Commons, File:Jure_Leskovec.jpg](https://commons.wikimedia.org/wiki/File:Jure_Leskovec.jpg) by Yerpo, 2016, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); 2052x2262 original cropped to head and shoulders and downscaled to 600x600. Chosen over his Stanford page photo, which is 201x213 and black and white | **not asked** - and the licence requires credit, see note below |
 | `petersen.jpg` | Jonas Petersen | [jonaspetersen.com](https://www.jonaspetersen.com/) profile image, which he publishes himself | own photo |
 | `jung.jpg` | Yoo-Min Jung | her own [Google Scholar](https://scholar.google.com/citations?user=tcFbj6MAAAAJ) profile photo, a studio headshot she published herself | **not asked** - see note below |
 | `hulsebos.jpg` | Madelon Hulsebos | [madelonhulsebos.com](https://www.madelonhulsebos.com/) profile image | **not asked** |
@@ -32,6 +33,10 @@ CWI also publishes a headshot of Madelon Hulsebos, but it is 160x240 and black a
 would clash with the rest of the set. Her own site's photo is the better one and is the one used.
 
 ## Notes
+
+`leskovec.jpg` is the one photo under a licence with conditions. CC BY-SA 4.0 requires crediting
+the photographer (Yerpo), linking the licence and saying it was modified, and this file is that
+credit. If he sends a headshot of his own, swap it in and drop the row.
 
 `jung.jpg` is the one photo in the set that is not 600x600. Google Scholar serves it at only
 128x128 and it is upscaled to 256, which is still comfortably above the 46px the avatar renders
