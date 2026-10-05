@@ -261,6 +261,11 @@ main .section:nth-of-type(even) { background: var(--raise); }
   border: 1px dashed var(--rule); background: transparent;
   color: var(--text-mute); font-family: var(--mono); font-size: 1rem;
 }
+.avatar-mono {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--rule); color: var(--text);
+  font-family: var(--mono); font-size: 0.85rem; font-weight: 600;
+}
 .person-open .person-id h3,
 .person-open .aff,
 .person-open .bio { color: var(--text-mute); }

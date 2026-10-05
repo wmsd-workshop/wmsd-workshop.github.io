@@ -14,7 +14,7 @@ and a two-line email avoids an awkward one later.
 | `balestriero.jpg` | Randall Balestriero | [randallbalestriero.github.io](https://randallbalestriero.github.io/) profile image, cropped from a wider conference photo | **not asked** |
 | `dey.jpg` | Sharmita Dey | [sms.hest.ethz.ch](https://sms.hest.ethz.ch/the-group/team/sharmita-dey.html) SMS Lab team photo | **not asked** |
 | `dillmann.jpg` | Steven Dillmann | [stevendillmann.github.io](https://stevendillmann.github.io/) profile image | **not asked** |
-| `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** - *file kept, card off the site for now* |
+| `dubrawski.jpg` | Artur Dubrawski | [autonlab.org](https://autonlab.org/staff/dubrawski_artur.html) staff photo | **not asked** - on the site since 5 Oct 2026 |
 | `schmidhuber.jpg` | J&uuml;rgen Schmidhuber | cropped from the portrait on his [KAUST CEMSE profile](https://cemse.kaust.edu.sa/profiles/jurgen-schmidhuber), 1280x720 original downscaled to 600x600 | **not asked** |
 | `koyejo.jpg` | Sanmi Koyejo | [stairlab.stanford.edu](https://stairlab.stanford.edu/members/sanmi_koyejo.html) lab portrait, 1953x1953 studio shot downscaled to 600x600 | **not asked** |
 | `leskovec.jpg` | Jure Leskovec | [Wikimedia Commons, File:Jure_Leskovec.jpg](https://commons.wikimedia.org/wiki/File:Jure_Leskovec.jpg) by Yerpo, 2016, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); 2052x2262 original cropped to head and shoulders and downscaled to 600x600. Chosen over his Stanford page photo, which is 201x213 and black and white | **not asked** - and the licence requires credit, see note below |
