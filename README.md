@@ -1,7 +1,7 @@
 # wmsd-workshop.github.io
 
-Public website for **WMSD @ ICLR 2027 - World Models for Structured Data: what is next after
-foundation models?**
+Public website for **WMSD @ ICLR 2027 - World Models for Structured Data: From Prediction to
+Intervention**
 
 Live at <https://wmsd-workshop.github.io/>
 
