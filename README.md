@@ -1,7 +1,7 @@
 # wmsd-workshop.github.io
 
-Public website for **WMSD @ ICLR 2027 - World Models for Structured Data: From Prediction to
-Action**
+Public website for **WMSD @ ICLR 2027 - World Models for Structured Data: What Happens If We
+Act?**
 
 Live at <https://wmsd-workshop.github.io/>
 
