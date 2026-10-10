@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WMSD - World Models for Structured Data | ICLR 2027 Workshop</title>
-<meta name="description" content="World Models for Structured Data - a proposed workshop at ICLR 2027 on world models for relational, tabular and telemetry state: models you can roll forward under an action you choose.">
+<meta name="description" content="World Models for Structured Data - a proposed workshop at ICLR 2027 on world models for relational, tabular and telemetry state: models that predict how a system evolves under an action you choose.">
 <link rel="canonical" href="https://wmsd-workshop.github.io/">
 
 <meta property="og:site_name" content="WMSD @ ICLR 2027">
@@ -100,8 +100,8 @@
     <div class="prose">
       <p>
         Real-world systems have been measured by sensors and logged by the software that runs
-        them for decades, yet we have very little ability to ask what would have happened had we
-        run them differently. That state arrives as tables, event logs and sensor streams rather
+        them for decades, yet we can rarely ask what would have happened had they been run
+        differently. That state arrives as tables, event logs and sensor streams rather
         than as video, so the world-model literature, which has grown up around pixels and robots,
         has largely passed it by.
       </p>
@@ -112,8 +112,8 @@
         comes next.
       </p>
       <p>
-        A forecast extrapolates a system as it is being run. A world model rolls it forward under
-        an action you choose, including one nobody took. Prediction is much of the machinery; what
+        A forecast extrapolates a system as it is being run. A world model predicts how it evolves
+        under an action you choose, including one nobody took. Prediction is much of the machinery; what
         is missing is the action, and a notion of state that survives being intervened on.
       </p>
       <p>
@@ -136,8 +136,9 @@
       Work on world models for structured data: tables, time series, event logs, relational
       schemas. Work on the tabular, time-series and relational foundation models underneath them
       counts too when it bears on action, as a component, a baseline or evidence on whether
-      prediction is enough. The topics below are prompts, not a filter.
-      If your work belongs in this conversation, send it.
+      prediction is enough. Submissions may address any of the topics below, including methods,
+      benchmarks and preliminary or negative results. Causal machine learning for interventional
+      prediction is in scope too.
     </p>
     <div class="cards">
       <article class="card">
@@ -175,8 +176,8 @@
     </div>
     <p class="note">
       Up to four pages plus references and appendix, non-archival, double-blind on OpenReview.
-      Extended abstracts and work in progress are welcome; novelty is not required, and neither
-      are positive results.
+      Extended abstracts and work in progress are welcome. Reproductions, re-analyses and negative
+      results are welcome too; papers already published at a machine learning conference are not.
     </p>
   </div>
 </section>
@@ -195,7 +196,7 @@
             <p class="aff">Brown University</p>
           </div>
         </div>
-        <p class="bio">Lead author of <em>A Cookbook of Self-Supervised Learning</em>, and co-author with Yann LeCun on planning with JEPA latent dynamics models. Learnable signal processing for noisy, non-stationary time series.</p>
+        <p class="bio">First author of <em>A Cookbook of Self-Supervised Learning</em> and co-author, with Yann LeCun, of the case for planning with latent dynamics models. He has since applied next-latent prediction to time series.</p>
       </article>
       <article class="person">
         <div class="person-head">
@@ -259,8 +260,8 @@
         database with known causal ground truth, and an industrial track with real commanded
         actions on robot arms. We publish logged state, action and outcome data. You submit
         predicted outcomes for a set of interventions that are absent from those logs. Entries are scored on held-out
-        <em>interventions</em>, not held-out time, because no interventional benchmark exists
-        today for relational or telemetry data. The relational track is scored at several
+        <em>interventions</em>, not held-out time, because the question is what happens under
+        actions the logs do not contain. The relational track is scored at several
         horizons and on how well entries rank candidate policies.
       </p>
       <p>
