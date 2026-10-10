@@ -23,6 +23,7 @@ and a two-line email avoids an awkward one later.
 | `hulsebos.jpg` | Madelon Hulsebos | [madelonhulsebos.com](https://www.madelonhulsebos.com/) profile image | **not asked** |
 | `purucker.jpg` | Lennart Purucker | [ml.informatik.uni-freiburg.de/profile/purucker](https://ml.informatik.uni-freiburg.de/profile/purucker/) staff photo, cropped to head and shoulders | **not asked** - and this is a podium shot, so ask him for a proper headshot |
 | `sen.jpg` | Rajat Sen | his own [Google Scholar](https://scholar.google.com/citations?user=YzsCLBoAAAAJ) profile photo (192x256, outdoor), cropped to head and shoulders and upscaled to 256x256. His homepage uses an illustrated avatar, which would clash with the set | **not asked** - ask him for a proper headshot |
+| `hutter.jpg` | Frank Hutter | [ml.informatik.uni-freiburg.de/profile/hutter](https://ml.informatik.uni-freiburg.de/profile/hutter/) high-resolution staff photo, 2581x3044 cropped square and downscaled to 600x600 | **not asked** |
 
 All are cropped square and saved at 600x600.
 
